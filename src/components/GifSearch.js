@@ -7,3 +7,17 @@ function GifSearch({ onSubmit }){
     event.preventDefault();
     onSubmit(query);
   }
+return (
+    <form onSubmit={handleSubmit}>
+      <input
+        type="text"
+        value={query}
+        onChange={(event) => setQuery(event.target.value)}
+        placeholder="Search for gifs"
+      />
+      <button type="submit">Search</button>
+    </form>
+  );
+};
+
+export default GifSearch;
